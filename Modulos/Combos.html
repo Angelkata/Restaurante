@@ -1,168 +1,317 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Combos</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="../Css/Combos.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="../js/Combos.js"></script>
-<link href="../Css/Inicio.css" rel="stylesheet" type="text/css"/>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/Combos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/Combos.js"></script>
+    <link href="../Css/Inicio.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="menu">
-<ion-icon name="menu-outline"></ion-icon>
-<ion-icon name="close-outline"></ion-icon>
-</div>
- 
-    <div class="barra-lateral"><div>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <div class="barra-lateral">
+        <div>
             <div class="nombre-pagina">
                 <span><strong style="font-size: 130%">EL ZARAPE</strong></span>
-            </div></div> <!-- Tabla de Navegacion Lateral -->
-        <nav class="navegacion"><ul><li>
-                    <a id="inbox" href="Inicio.html"> <i class="bi bi-door-open-fill"></i><span><strong>INICIO</strong></span>
-                    </a></li>
-                <li><a href="Sucursal.html"> <i class="bi bi-geo-alt-fill"></i><span>Sucursales</span>
-                    </a></li>
-                <li> <a href="Empleados.html"> <i class="bi bi-person-fill"></i> <span>Usuarios</span>
-                    </a></li>
-                <li><a href="Alimentos.html"><i class="bi bi-egg-fried"></i><span>Alimentos</span>
-                    </a></li>
-                <li><a href="Bebidas.html"> <i class="bi bi-cup-straw"></i><span>Bebidas</span>
-                    </a></li>
-                <li><a href="Combos.html"> <i class="bi bi-basket-fill"></i><span>Combos</span>
-                    </a></li></ul>
-        </nav> <!-- Falta Insertar Un icono USuario -->
-    <div class="usuario-container">
-    <div class="linea"></div>
-    <div class="usuario">
-        <i class="bi bi-person-bounding-box icono-usuario"></i>
-        <div class="info-usuario">
-            <div class="nombre-email">
-                <span class="nombre">ADMIN1</span>
-                <span class="email">admin1@gmail.com</span></div> 
-            <a href="../index.html"> <i class="bi bi-box-arrow-right icono-salir" title="Cerrar sesión"></i></a>
-        </div></div></div>   
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li><a id="inbox" href="Inicio.html"><i class="bi bi-door-open-fill"></i><span><strong>INICIO</strong></span></a></li>
+                <li><a href="Sucursal.html"><i class="bi bi-geo-alt-fill"></i><span>Sucursales</span></a></li>
+                <li><a href="Empleados.html"><i class="bi bi-person-fill"></i><span>Usuarios</span></a></li>
+                <li><a href="Alimentos.html"><i class="bi bi-egg-fried"></i><span>Alimentos</span></a></li>
+                <li><a href="Bebidas.html"><i class="bi bi-cup-straw"></i><span>Bebidas</span></a></li>
+                <li><a href="Combos.html"><i class="bi bi-basket-fill"></i><span>Combos</span></a></li>
+            </ul>
+        </nav>
+        <div class="usuario-container">
+            <div class="linea"></div>
+            <div class="usuario">
+                <i class="bi bi-person-bounding-box icono-usuario"></i>
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">ADMIN1</span>
+                        <span class="email">admin1@gmail.com</span>
+                    </div>
+                    <a href="../index.html"><i class="bi bi-box-arrow-right icono-salir" title="Cerrar sesión"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
- 
-        <main>
-             <header style="text-align: left;">
-        <img src="../Imagenes/Logo.png" width="300px" alt="Logo Fama">
-        <h1 style="text-align: center;">Combos</h1>
-    </header>
-<div class="content">
-<div class="search-container">
-<input type="text" id="searchInput" placeholder="Buscar...">
-<button id="printResults" class="btn btn-secondary">Imprimir Resultados</button>
-</div>
-    <div class="btn-agregar">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#form-agregar">Agregar Combo</button>
-</div>
- 
-                <table class="table">
-<thead>
-<tr>
-<th>Id</th>
-<th>Nombre</th>
-<th>Descripción</th>
-<th>Foto</th>
-<th>Precio</th>
-<th>Categoría</th>
-<th>Acciones</th>
-</tr>
-</thead>
-<tbody id="registros">
-<!-- Contenido de la tabla generado dinámicamente -->
-</tbody>
-</table>
- 
+    <main>
+        <header style="text-align: left;">
+            <img src="../Imagenes/Logo.png" width="300px" alt="Logo Fama">
+            <h1 style="text-align: center;">Combos</h1>
+        </header>
+        <div class="content">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button id="printResults" class="btn btn-secondary">Imprimir Resultados</button>
+            </div>
+            <button type="button" class="btn btn-danger custom-button" data-toggle="modal" data-target="#agregarComboModal">
+            Agregar Combo
+        </button>
 
- 
-                <!-- Modal Agregar -->
-<div class="modal fade" id="form-agregar" tabindex="-1" role="dialog" aria-labelledby="formAgregarLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="formAgregarLabel">Agregar Combo</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form id="addFoodForm">
-<input type="text" id="foodName" name="nombre" class="form-control" placeholder="Nombre" required>
-<input type="text" id="foodDescription" name="descripcion" class="form-control" placeholder="Descripción" required>
-<input type="text" id="foodPhoto" name="foto" class="form-control" placeholder="Foto URL" required>
-<input type="number" id="foodPrice" name="precio" class="form-control" placeholder="Precio" step="0.01" required>
-<select id="foodCategory" name="categoria" class="form-control" required>
-<option value="desayuno">Desayuno</option>
-<option value="almuerzo">Almuerzo</option>
-<option value="cena">Cena</option>
-</select>
-<button type="submit" class="btn btn-primary mt-2">Guardar</button>
-</form>
-</div>
-</div>
-</div>
-</div>
- 
-                <!-- Modal Modificar -->
-<div class="modal fade" id="form-modificar" tabindex="-1" role="dialog" aria-labelledby="formModificarLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="formModificarLabel">Modificar Alimento</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<form id="modifyFoodForm">
-<input type="hidden" id="modifyFoodId" name="id">
-<input type="text" id="modifyFoodName" name="nombre" class="form-control" placeholder="Nombre">
-<input type="text" id="modifyFoodDescription" name="descripcion" class="form-control" placeholder="Descripción">
-<input type="text" id="modifyFoodPhoto" name="foto" class="form-control" placeholder="Foto URL">
-<input type="number" id="modifyFoodPrice" name="precio" class="form-control" placeholder="Precio" step="0.01">
-<select id="modifyFoodCategory" name="categoria" class="form-control">
-<option value="desayuno">Desayuno</option>
-<option value="almuerzo">Almuerzo</option>
-<option value="cena">Cena</option>
-</select>
-<button type="submit" class="btn btn-primary mt-2">Guardar Cambios</button>
-</form>
-</div>
-</div>
-</div>
-</div>
- 
-                <!-- Modal Eliminar -->
-<div class="modal fade" id="modal-eliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="modalEliminarLabel">Confirmar Eliminación</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<p id="modal-mensaje"></p>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-<button type="button" class="btn btn-primary" onclick="confirmarEliminacion()">Eliminar</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
- 
-        <footer>
-<p>© 2024 El ZARAPE. Todos los derechos reservados.</p>
-</footer>
+        <!-- Modal para agregar combo -->
+        <div class="modal fade" id="agregarComboModal" tabindex="-1" role="dialog" aria-labelledby="agregarComboModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="agregarComboModalLabel">Agregar Combo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="agregarComboForm">
+                            <div class="form-group">
+                                <label for="nombreCombo"><b>Nombre del Combo</b></label>
+                                <input type="text" class="form-control" id="nombreCombo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="precioCombo"><b>Precio</b></label>
+                                <input type="number" class="form-control" id="precioCombo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcionCombo"><b>Descripción</b></label>
+                                <textarea class="form-control" id="descripcionCombo" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label><b>Alimentos</b></label>
+                                <div id="alimentosCombo" class="form-group">
+                                    <!-- Casillas de verificación para alimentos serán agregadas dinámicamente -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><b>Bebidas</b></label>
+                                <div id="bebidasCombo" class="form-group">
+                                    <!-- Casillas de verificación para bebidas serán agregadas dinámicamente -->
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="button" class="btn btn-danger custom-button" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-danger custom-button">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de combos -->
+        <div class="mt-4">
+        <h2>Lista de Combos</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Alimentos</th>
+                    <th>Bebidas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaCombos">
+                <!-- Los registros de combos se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <!-- Modal para editar combo -->
+    <div class="modal fade" id="editarComboModal" tabindex="-1" role="dialog" aria-labelledby="editarComboModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarComboModalLabel">Editar Combo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editarComboForm">
+                        <input type="hidden" id="editarIdCombo">
+                        <div class="form-group">
+                            <label for="editarNombreCombo">Nombre del Combo</label>
+                            <input type="text" class="form-control" id="editarNombreCombo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editarDescripcionCombo">Descripción</label>
+                            <textarea class="form-control" id="editarDescripcionCombo" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editarPrecioCombo">Precio</label>
+                            <input type="number" class="form-control" id="editarPrecioCombo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Alimentos</label>
+                            <div id="editarAlimentosCombo" class="form-group">
+                                <!-- Casillas de verificación para alimentos serán agregadas dinámicamente -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Bebidas</label>
+                            <div id="editarBebidasCombo" class="form-group">
+                                <!-- Casillas de verificación para bebidas serán agregadas dinámicamente -->
+                            </div>
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="button" class="btn btn-danger custom-button" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-danger custom-button">Guardar Cambios</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 El ZARAPE. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let combos = JSON.parse(localStorage.getItem('combos')) || [];
+        let idCounter = combos.length ? combos[combos.length - 1].id + 1 : 1000;
+        let alimentos = []; // Deberían ser cargados desde el catálogo de alimentos
+        let bebidas = []; // Deberían ser cargados desde el catálogo de bebidas
+
+        // Ejemplo de carga inicial de alimentos y bebidas (debería ser reemplazado por datos reales)
+        alimentos = [{ id: 1000, nombre: 'Enchiladas Mezquitas' }, { id: 1001, nombre: 'Waffles' }, { id: 1002, nombre: 'Torta Ahogada' }, { id: 1003, nombre: 'Fruta Mixta' }, { id: 1004, nombre: 'Ensalada de Pollo' }];
+        bebidas = [{ id: 1000, nombre: 'Limonada' }, { id: 1001, nombre: 'Gaseosa' }, { id: 1002, nombre: 'Té Helado' }, { id: 1003, nombre: 'Agua' }, { id: 1004, nombre: 'Café' }];
+
+        // Cargar opciones de alimentos y bebidas en los modales
+        $(document).ready(function() {
+            cargarOpciones('alimentosCombo', alimentos);
+            cargarOpciones('bebidasCombo', bebidas);
+            cargarOpciones('editarAlimentosCombo', alimentos);
+            cargarOpciones('editarBebidasCombo', bebidas);
+            renderCombos();
+        });
+
+        function cargarOpciones(contenedorId, opciones) {
+            const contenedor = document.getElementById(contenedorId);
+            contenedor.innerHTML = '';
+            opciones.forEach(opcion => {
+                const checkbox = document.createElement('div');
+                checkbox.className = 'form-check';
+                checkbox.innerHTML = `
+                    <input class="form-check-input" type="checkbox" value="${opcion.id}" id="${contenedorId}-${opcion.id}">
+                    <label class="form-check-label" for="${contenedorId}-${opcion.id}">${opcion.nombre}</label>
+                `;
+                contenedor.appendChild(checkbox);
+            });
+        }
+
+        document.getElementById('agregarComboForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombreCombo').value;
+            const descripcion = document.getElementById('descripcionCombo').value;
+            const precio = parseFloat(document.getElementById('precioCombo').value);
+            const alimentosSeleccionados = Array.from(document.querySelectorAll('#alimentosCombo .form-check-input:checked')).map(checkbox => checkbox.value);
+            const bebidasSeleccionadas = Array.from(document.querySelectorAll('#bebidasCombo .form-check-input:checked')).map(checkbox => checkbox.value);
+
+            const nuevoCombo = {
+                id: idCounter++,
+                nombre,
+                descripcion,
+                precio,
+                alimentos: alimentosSeleccionados,
+                bebidas: bebidasSeleccionadas
+            };
+            combos.push(nuevoCombo);
+            localStorage.setItem('combos', JSON.stringify(combos));
+            renderCombos();
+            $('#agregarComboModal').modal('hide');
+            document.getElementById('agregarComboForm').reset();
+        });
+
+        function renderCombos() {
+            const listaCombos = document.getElementById('listaCombos');
+            listaCombos.innerHTML = '';
+            combos.forEach(combo => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${combo.id}</td>
+                    <td>${combo.nombre}</td>
+                    <td>${combo.descripcion}</td>
+                    <td>${combo.precio}</td>
+                    <td>${combo.alimentos.map(id => alimentos.find(alimento => alimento.id == id).nombre).join(', ')}</td>
+                    <td>${combo.bebidas.map(id => bebidas.find(bebida => bebida.id == id).nombre).join(', ')}</td>
+                    <td>
+                        <button class="btn btn-danger custom-button btn-sm" onclick="editarCombo(${combo.id})">Editar</button>
+                        <button class="btn btn-danger custom-button btn-sm" onclick="eliminarCombo(${combo.id})">Eliminar</button>
+                    </td>
+                `;
+                listaCombos.appendChild(fila);
+            });
+        }
+
+        function buscarAlimento() {
+            const termino = document.getElementById('buscarAlimento').value.toLowerCase();
+            const filas = document.querySelectorAll('#listaCombos tr');
+            filas.forEach(fila => {
+                const texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(termino) ? '' : 'none';
+            });
+        }
+
+        function editarCombo(id) {
+            const combo = combos.find(combo => combo.id == id);
+            document.getElementById('editarIdCombo').value = combo.id;
+            document.getElementById('editarNombreCombo').value = combo.nombre;
+            document.getElementById('editarDescripcionCombo').value = combo.descripcion;
+            document.getElementById('editarPrecioCombo').value = combo.precio;
+            document.querySelectorAll('#editarAlimentosCombo .form-check-input').forEach(checkbox => {
+                checkbox.checked = combo.alimentos.includes(checkbox.value);
+            });
+            document.querySelectorAll('#editarBebidasCombo .form-check-input').forEach(checkbox => {
+                checkbox.checked = combo.bebidas.includes(checkbox.value);
+            });
+            $('#editarComboModal').modal('show');
+        }
+
+        document.getElementById('editarComboForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const id = parseInt(document.getElementById('editarIdCombo').value);
+            const nombre = document.getElementById('editarNombreCombo').value;
+            const descripcion = document.getElementById('editarDescripcionCombo').value;
+            const precio = parseFloat(document.getElementById('editarPrecioCombo').value);
+            const alimentosSeleccionados = Array.from(document.querySelectorAll('#editarAlimentosCombo .form-check-input:checked')).map(checkbox => checkbox.value);
+            const bebidasSeleccionadas = Array.from(document.querySelectorAll('#editarBebidasCombo .form-check-input:checked')).map(checkbox => checkbox.value);
+
+            const comboIndex = combos.findIndex(combo => combo.id == id);
+            if (comboIndex > -1) {
+                combos[comboIndex] = {
+                    id,
+                    nombre,
+                    descripcion,
+                    precio,
+                    alimentos: alimentosSeleccionados,
+                    bebidas: bebidasSeleccionadas
+                };
+                localStorage.setItem('combos', JSON.stringify(combos));
+                renderCombos();
+                $('#editarComboModal').modal('hide');
+            }
+        });
+
+        function eliminarCombo(id) {
+            combos = combos.filter(combo => combo.id != id);
+            localStorage.setItem('combos', JSON.stringify(combos));
+            renderCombos();
+        }
+    </script>
 </body>
 </html>
