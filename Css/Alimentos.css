@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+ 
+table, th, td {
+    border: 1px solid #ddd;
+}
+ 
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+ 
+th {
+    background-color: #f2f2f2;
+}
+ 
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+ 
+.actions {
+    display: flex;
+    gap: 5px;
+}
+ 
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+ 
+button.modify {
+    background-color: #28a745;
+}
+ 
+button.delete {
+    background-color: #dc3545;
+}
+ 
+button:hover {
+    opacity: 0.8;
+}
+ 
+.btn-modificar {
+    background-color: #FFA500; /* Naranja */
+    color: white;
+}
+ 
+.btn-eliminar {
+    background-color: #DC143C; /* Rojo */
+    color: white;
+}
+ 
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+ 
+.search-container input {
+    padding: 5px;
+    width: 200px;
+}
+ 
+.btn-agregar {
+    margin: 20px 0;
+}
+ 
+
+ 
+.modal-body input,
+.modal-body select {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #222; /* Color de fondo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0; /* Espaciado en la parte superior e inferior */
+    font-family: Arial, sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.footer-bottom {
+    border-top: 1px solid #444; /* Línea superior */
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+
