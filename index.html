@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Css/Inicio-de-Sesion.css" rel="stylesheet" type="text/css"/>
+    <title>LOGIN</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="Correo Electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div class="footer">
+            <p>ECHO POR F.A.M.A <br> Cualquier Problema con la Pagina Reportar </p>
+            <p><strong>FAMACOMANY</strong>@GMAIL.COM </p> Y AL
+            <p><strong>477897897</strong></p> 
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            // Lista de usuarios permitidos
+            const usuarios = [
+                { email: "juan@example.com", password: "H2rY8Bv4k1T9", nombre: "Juan Pérez" },
+                { email: "maria@example.com", password: "P5jQ3Wf6x8L0", nombre: "María García" },
+                { email: "carlos@example.com", password: "D3sF7Jk9z6X2", nombre: "Carlos Sánchez" },
+                { email: "ana@example.com", password: "M8vQ2Rj5k7B1", nombre: "Ana López" },
+                { email: "luis@example.com", password: "B2fG9Nw8r6T3", nombre: "Luis Martínez" },
+            ];
+
+            $('#loginForm').on('submit', function(event) {
+                event.preventDefault();
+
+                const email = $('#email').val();
+                const password = $('#password').val();
+
+                const usuarioValido = usuarios.find(user => user.email === email && user.password === password);
+
+                if (usuarioValido) {
+                    // Guardar el nombre del usuario en localStorage
+                    localStorage.setItem('nombreUsuario', usuarioValido.nombre);
+
+                    // Redirigir al usuario a la página de inicio
+                    window.location.href = "Modulos/Inicio.html";
+                } else {
+                    alert("Correo Electrónico o Contraseña incorrectos. Inténtalo de nuevo.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
