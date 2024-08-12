@@ -10,7 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/Empleados.js"></script>
     <link href="../Css/Inicio.css" rel="stylesheet" type="text/css"/>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="menu">
@@ -18,54 +18,72 @@
         <ion-icon name="close-outline"></ion-icon>
     </div>
 
-     <div class="barra-lateral"><div>
+    <div class="barra-lateral">
+        <div>
             <div class="nombre-pagina">
                 <span><strong style="font-size: 130%">EL ZARAPE</strong></span>
-            </div></div> <!-- Tabla de Navegacion Lateral -->
-        <nav class="navegacion"><ul><li>
-                    <a id="inbox" href="Inicio.html"> <i class="bi bi-door-open-fill"></i><span><strong>INICIO</strong></span>
-                    </a></li>
-                <li><a href="Sucursal.html"> <i class="bi bi-geo-alt-fill"></i><span>Sucursales</span>
-                    </a></li>
-                <li> <a href="Empleados.html"> <i class="bi bi-person-fill"></i> <span>Usuarios</span>
-                    </a></li>
-                <li><a href="Alimentos.html"><i class="bi bi-egg-fried"></i><span>Alimentos</span>
-                    </a></li>
-                <li><a href="Bebidas.html"> <i class="bi bi-cup-straw"></i><span>Bebidas</span>
-                    </a></li>
-                <li><a href="Combos.html"> <i class="bi bi-basket-fill"></i><span>Combos</span>
-                    </a></li></ul>
-        </nav> <!-- Falta Insertar Un icono USuario -->
-    <div class="usuario-container">
-    <div class="linea"></div>
-    <div class="usuario">
-        <i class="bi bi-person-bounding-box icono-usuario"></i>
-        <div class="info-usuario">
-            <div class="nombre-email">
-                <span class="nombre">ADMIN1</span>
-                <span class="email">admin1@gmail.com</span></div> 
-            <a href="../index.html"> <i class="bi bi-box-arrow-right icono-salir" title="Cerrar sesión"></i></a>
-        </div></div></div>   
+            </div>
+        </div> <!-- Tabla de Navegacion Lateral -->
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="Inicio.html"> <i class="bi bi-door-open-fill"></i><span><strong>INICIO</strong></span></a>
+                </li>
+                <li>
+                    <a href="Sucursal.html"> <i class="bi bi-geo-alt-fill"></i><span>Sucursales</span></a>
+                </li>
+                <li>
+                    <a href="Empleados.html"> <i class="bi bi-person-fill"></i> <span>Usuarios</span></a>
+                </li>
+                <li>
+                    <a href="Alimentos.html"><i class="bi bi-egg-fried"></i><span>Alimentos</span></a>
+                </li>
+                <li>
+                    <a href="Bebidas.html"> <i class="bi bi-cup-straw"></i><span>Bebidas</span></a>
+                </li>
+                <li>
+                    <a href="Combos.html"> <i class="bi bi-basket-fill"></i><span>Combos</span></a>
+                </li>
+            </ul>
+        </nav> <!-- Falta Insertar Un icono Usuario -->
+        <div class="usuario-container">
+            <div class="linea"></div>
+            <div class="usuario">
+                <i class="bi bi-person-bounding-box icono-usuario"></i>
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">ADMIN1</span>
+                        <span class="email">admin1@gmail.com</span>
+                    </div>
+                    <a href="../index.html"> <i class="bi bi-box-arrow-right icono-salir" title="Cerrar sesión"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <main>
-         <header style="text-align: left;">
-        <img src="../Imagenes/Logo.png" width="300px" alt="Logo Fama">
-        <h1 style="text-align: center;">Usuarios</h1>
-    </header>
+        <header style="text-align: left;">
+            <img src="../Imagenes/Logo.png" width="300px" alt="Logo Fama">
+            <h1 style="text-align: center;">Usuarios</h1>
+        </header>
         <div class="content">
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Buscar...">
                 <button id="printResults" class="btn btn-secondary">Imprimir Resultados</button>
-            </div>  <div class="btn-agregar">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#form-agregar">Agregar Empleado</button>
+            </div>
+            <div class="btn-agregar">
+                <button type="button" class="" data-toggle="modal" data-target="#form-agregar" style="background-color: rgb(250, 129, 47)">Agregar Empleado</button>
             </div>
 
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>NO.Empleado</th>
                         <th>Nombre</th>
+                        <th>Apellido P</th>
+                        <th>Apellido M</th>
+                        <th>Numero de Telefono</th>
+                        <th>Direccion</th>
                         <th>Contraseña</th>
                         <th>Sucursal</th>
                         <th>Acciones</th>
@@ -75,8 +93,6 @@
                     <!-- Contenido de la tabla generado dinámicamente -->
                 </tbody>
             </table>
-
-          
 
             <!-- Modal Agregar Empleado -->
             <div class="modal fade" id="form-agregar" tabindex="-1" role="dialog" aria-labelledby="formAgregarLabel" aria-hidden="true">
@@ -91,8 +107,26 @@
                         <div class="modal-body">
                             <form id="addFoodForm">
                                 <input type="text" id="foodName" name="nombre" class="form-control" placeholder="Nombre" required>
+                                <input type="text" id="appNameP" name="nombre" class="form-control" placeholder="Apellido P" >
+                                <input type="text" id="appNameM" name="nombre" class="form-control" placeholder="Apellido M" >
+                                <input type="text" id="noTelName" name="nombre" class="form-control" placeholder="Numero de telefono" required>
+                                <input type="text" id="dirName" name="nombre" class="form-control" placeholder="Direccion" required>
                                 <input type="text" id="foodDescription" name="contraseña" class="form-control" placeholder="Contraseña" required>
-                                <input type="text" id="foodPhoto" name="sucursal" class="form-control" placeholder="Sucursal" required>
+                                <!-- Select para Sucursal -->
+                                <select id="foodSucursal" name="sucursal" class="form-control" required>
+                                    <option value="">Seleccionar Sucursal</option>
+                                    <option value="Sucursal1">Sucursal Centro</option>
+                                    <option value="Sucursal2">Sucursal Norte</option>
+                                    <option value="Sucursal3">Sucursal Sur</option>
+                                    <option value="Sucursal3">Sucursal Este</option>
+                                    <option value="Sucursal3">Sucursal Oeste</option>
+                                    <option value="Sucursal3">Sucursal Altavista</option>
+                                    <option value="Sucursal3">Sucursal Del Valle</option>
+                                    <option value="Sucursal3">Sucursal Altavista</option>
+                                    <option value="Sucursal3">Sucursal Polanco</option>
+                                    <option value="Sucursal3">Sucursal Condesa</option>
+                                    <option value="Sucursal3">Sucursal Roma</option>
+                                </select>
                                 <button type="submit" class="btn btn-primary mt-2">Guardar</button>
                             </form>
                         </div>
@@ -114,8 +148,26 @@
                             <form id="modifyFoodForm">
                                 <input type="hidden" id="modifyFoodId" name="id">
                                 <input type="text" id="modifyFoodName" name="nombre" class="form-control" placeholder="Nombre">
-                                <input type="text" id="modifyFoodDescription" name="contraseña" class="form-control" placeholder="Contraseña">
-                                <input type="text" id="modifyFoodPhoto" name="sucursal" class="form-control" placeholder="Sucursal">
+                                <input type="text" id="modifyappNameP" name="nombre" class="form-control" placeholder="Apellido P" >
+                                <input type="text" id="modifyappNameM" name="nombre" class="form-control" placeholder="Apellido M" >
+                                <input type="text" id="modifynoTelName" name="nombre" class="form-control" placeholder="Numero de telefono" required>
+                                <input type="text" id="modifydirName" name="nombre" class="form-control" placeholder="Direccion" required>
+                                <input type="text" id="modifyFoodDescription" name="contraseña" class="form-control" placeholder="Contraseña" required>
+                                
+                                <!-- Select para Sucursal en modificar -->
+                                <select id="modifyFoodSucursal" name="sucursal" class="form-control" required>
+                                    <option value="Sucursal1">Sucursal Centro</option>
+                                    <option value="Sucursal2">Sucursal Norte</option>
+                                    <option value="Sucursal3">Sucursal Sur</option>
+                                    <option value="Sucursal3">Sucursal Este</option>
+                                    <option value="Sucursal3">Sucursal Oeste</option>
+                                    <option value="Sucursal3">Sucursal Altavista</option>
+                                    <option value="Sucursal3">Sucursal Del Valle</option>
+                                    <option value="Sucursal3">Sucursal Altavista</option>
+                                    <option value="Sucursal3">Sucursal Polanco</option>
+                                    <option value="Sucursal3">Sucursal Condesa</option>
+                                    <option value="Sucursal3">Sucursal Roma</option>
+                                </select>
                                 <button type="submit" class="btn btn-primary mt-2">Guardar Cambios</button>
                             </form>
                         </div>
